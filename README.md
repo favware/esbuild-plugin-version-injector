@@ -13,6 +13,23 @@ date into your built JavaScript files**
 _This plugin was inspired by
 [rollup-plugin-version-injector](https://github.com/djhouseknecht/rollup-plugin-version-injector)_
 
+**Table of Contents**
+
+- [esbuild-plugin-version-injector](#esbuild-plugin-version-injector)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [With [`esbuild`][esbuild]](#with-esbuildesbuild)
+    - [With [`tsup`][tsup]](#with-tsuptsup)
+  - [File Injection examples](#file-injection-examples)
+    - [JavaScript / TypeScript](#javascript--typescript)
+    - [JSON](#json)
+    - [CSS](#css)
+    - [Text](#text)
+  - [Options](#options)
+  - [Buy us some doughnuts](#buy-us-some-doughnuts)
+  - [Contributors ✨](#contributors-%E2%9C%A8)
+
 ## Description
 
 There are many ways to export a constant that holds your package variable, from
