@@ -1,0 +1,17 @@
+// Vitest Snapshot v1
+
+exports[`TS based ESM > GIVEN no plugin options THEN injects version 1`] = `
+"// tests/fixtures/build-in/typescript.mts
+var version = \\"1.0.0\\";
+
+export { version };
+"
+`;
+
+exports[`TS based ESM > GIVEN versionOrCurrentDate = "current-date" THEN injects current date 1`] = `
+"// tests/fixtures/build-in/typescript.mts
+var version = \\"2022-02-01T14:30:30.000Z\\";
+
+export { version };
+"
+`;
