@@ -23,6 +23,9 @@
     "prepack": "yarn build && pinst --disable",
     "postpack": "pinst --enable"
   },
+  "dependencies": {
+    "@sapphire/result": "^2.5.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",

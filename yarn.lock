@@ -1868,12 +1868,14 @@ __metadata:
     "@favware/cliff-jumper": 1.8.8
     "@sapphire/eslint-config": ^4.3.8
     "@sapphire/prettier-config": ^1.4.4
+    "@sapphire/result": ^2.5.0
     "@sapphire/ts-config": ^3.3.4
     "@types/node": ^18.8.3
     "@typescript-eslint/eslint-plugin": ^5.39.0
     "@typescript-eslint/parser": ^5.39.0
     "@vitest/coverage-c8": ^0.24.0
     cz-conventional-changelog: ^3.3.0
+    esbuild: ^0.15.10
     eslint: ^8.24.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
@@ -1916,7 +1918,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.15.1, esbuild@npm:^0.15.9":
+"esbuild@npm:^0.15.1, esbuild@npm:^0.15.10, esbuild@npm:^0.15.9":
   version: 0.15.10
   resolution: "esbuild@npm:0.15.10"
   dependencies:
