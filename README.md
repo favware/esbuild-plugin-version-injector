@@ -49,11 +49,39 @@ npm install -D esbuild-plugin-version-injector
 
 ### With [`esbuild`][esbuild]
 
-TODO
+Add the plugin to your esbuild options, i.e.:
+
+```js
+const esbuild = require('esbuild');
+const { resolve } = require('path');
+const {
+  esbuildPluginVersionInjector
+} = require('esbuild-plugin-version-injector');
+
+await esbuild.build({
+  format: 'cjs',
+  entryPoints: [resolve(__dirname, './src/index.ts')],
+  outdir: resolve(__dirname, './dist'),
+  plugins: [esbuildPluginVersionInjector()]
+});
+```
 
 ### With [`tsup`][tsup]
 
-TODO
+Add the plugin to your `tsup.config.ts`, i.e.:
+
+```js
+import { defineConfig } from 'tsup';
+import { resolve } from 'path';
+import { esbuildPluginVersionInjector } from 'esbuild-plugin-version-injector';
+
+await defineConfig({
+  format: ['cjs'],
+  entry: ['./src/index.ts'],
+  outDir: './dist',
+  esbuildPlugins: [tsBasedEsbuildPluginVersionInjector()]
+});
+```
 
 [esbuild]: https://esbuild.github.io/
 [tsup]: https://tsup.egoist.dev
