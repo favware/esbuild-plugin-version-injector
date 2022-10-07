@@ -516,15 +516,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/is-ci@npm:^3":
-  version: 3.0.0
-  resolution: "@types/is-ci@npm:3.0.0"
-  dependencies:
-    ci-info: ^3.1.0
-  checksum: 7c1f1f16c1fa2134de7400d82766c83fa76057261ba890628af77a09382ebb92d945bb077b98cfcf3d40ab1469c9ffbd2278112867edbe57aa655f53547eb139
-  languageName: node
-  linkType: hard
-
 "@types/istanbul-lib-coverage@npm:^2.0.1":
   version: 2.0.4
   resolution: "@types/istanbul-lib-coverage@npm:2.0.4"
@@ -1212,7 +1203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^3.1.0, ci-info@npm:^3.2.0":
+"ci-info@npm:^3.2.0":
   version: 3.4.0
   resolution: "ci-info@npm:3.4.0"
   checksum: 7f660730170a6ce248e173b670587a0c583e31526d21afcd21f77c811c1aaeb8926999081542d1f30e12cce1df582d4c88709fa45f44c00498b46bdf21d4d21a
@@ -1886,7 +1877,6 @@ __metadata:
     "@sapphire/prettier-config": ^1.4.4
     "@sapphire/result": ^2.5.0
     "@sapphire/ts-config": ^3.3.4
-    "@types/is-ci": ^3
     "@types/node": ^18.8.3
     "@typescript-eslint/eslint-plugin": ^5.39.0
     "@typescript-eslint/parser": ^5.39.0
