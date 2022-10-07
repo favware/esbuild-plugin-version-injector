@@ -10,6 +10,9 @@ date into your built JavaScript files**
 
 </div>
 
+_This plugin was inspired by
+[rollup-plugin-version-injector](https://github.com/djhouseknecht/rollup-plugin-version-injector)_
+
 ## Description
 
 There are many ways to export a constant that holds your package variable, from
