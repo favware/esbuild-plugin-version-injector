@@ -10,8 +10,9 @@ docs/
 .yarn/install-state.gz
 .yarn/build-state.yml
 
-# Ignore tsc dist folder
+# Ignore output folders
 dist/
+tests/build-out/
 
 # Ignore heapsnapshot and log files
 *.heapsnapshot
@@ -19,9 +20,3 @@ dist/
 
 # Ignore package locks
 package-lock.json
-
-# Ignore the GH cli downloaded by workflows
-gh
-
-# Ignore the "wiki" folder so we can checkout the wiki inside the same folder
-wiki/
