@@ -9,6 +9,7 @@ jobs:
   Publish:
     name: Publish Next
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'favware'
     steps:
       - name: Checkout Project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
@@ -16,18 +17,16 @@ jobs:
           fetch-depth: 0
       - name: Add TypeScript problem matcher
         run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-      - name: Use Node.js v16 with Yarn Registry
+      - name: Use Node.js v18 with Yarn Registry
         uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048 # tag=v3
         with:
-          node-version: 16
+          node-version: 18
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
       - name: Install Dependencies
         run: yarn --immutable
-      - name: Build package
-        run: yarn build
       - name: Bump Version
-        run: yarn start --preid "next.$(git rev-parse --verify --short HEAD)" -v
+        run: yarn bump --preid "next.$(git rev-parse --verify --short HEAD)"
       - name: Publish to Yarnpkg
         run: |
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
