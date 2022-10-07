@@ -38,7 +38,10 @@ export interface PluginOptions {
    */
   injectTag?: string;
   /**
-   * relative path to project's package.json
+   * Relative path to project's package.json
+   *
+   * Note if you set {@link PluginOptions.versionOrCurrentDate} to 'current-date' this option will be ignored.
+   *
    * @default './package.json'
    */
   packageJsonPath?: string;
