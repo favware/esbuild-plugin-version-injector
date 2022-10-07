@@ -86,6 +86,68 @@ await defineConfig({
 [esbuild]: https://esbuild.github.io/
 [tsup]: https://tsup.egoist.dev
 
+## File Injection examples
+
+### JavaScript / TypeScript
+
+```ts
+/**
+ * The current version that you are currently using.
+ *
+ * Note to developers: This needs to explicitly be `string` so it is not typed as a "const string" that gets injected by esbuild
+ */
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
+export const version: string = '[VI]{{inject}}[/VI]';
+```
+
+### JSON
+
+```json
+{
+  "version": "[VI]{{inject}}[/VI]"
+}
+```
+
+### CSS
+
+```css
+.myClass {
+  content: '[VI]{{inject}}[/VI]';
+}
+```
+
+### Text
+
+```txt
+This document is for version [VI]{{inject}}[/VI]
+```
+
+## Options
+
+The plugin accepts the following options:
+
+- `versionOrCurrentDate`: One of `'version'`, `'current-date'` or one of the
+  entries of the `VersionOrCurrentDate` enum. Defaults to `'version'`. This
+  determines what format to inject into your built files. If this is set to
+  `current-date` then the current date in the
+  [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) will be inserted instead of
+  the package.json version.
+
+- `injectTag`: The tag that should be searched for and replaced across your
+  code. Defaults to `'[VI]{{inject}}[/VI]'`. This can be any string, but it is
+  recommended to use something that is unlikely to be used in your code.
+
+- `packageJsonPath` The relative path to your package.json file. Defaults to
+  `'./package.json'`. This is used to read the version number from your
+  package.json file.
+
+- `filter`: This is an advanced use-case option with which you can filter which
+  files esbuild should apply this plugin on
+
+- `namespace`: This is an advanced use-case option through which the
+  [esbuild namespace](https://esbuild.github.io/plugins/#namespaces) can be
+  configured
+
 ## Buy us some doughnuts
 
 Favware projects are and always will be open source, even if we don't get
