@@ -1,5 +1,5 @@
 import tsup, { type Options } from 'tsup';
-import type { PluginOptions } from '../../../dist';
+import type { PluginOptions } from '../../../src';
 import { assertFileContent, buildAbsolutePath, createTsupConfig } from '../../common/util';
 
 function createConfig(pluginOptions?: PluginOptions): Options {

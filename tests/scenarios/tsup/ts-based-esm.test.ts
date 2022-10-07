@@ -1,5 +1,5 @@
 import tsup, { type Options } from 'tsup';
-import type { PluginOptions } from '../../../dist';
+import { VersionOrCurrentDate, type PluginOptions } from '../../../src';
 import { assertFileContent, buildAbsolutePath, createTsupConfig } from '../../common/util';
 
 function createConfig(pluginOptions?: PluginOptions): Options {
@@ -23,7 +23,7 @@ describe('TS based ESM', () => {
 
   test('GIVEN versionOrCurrentDate = "current-date" THEN injects current date', async () => {
     const config = createConfig({
-      versionOrCurrentDate: 'current-date'
+      versionOrCurrentDate: VersionOrCurrentDate.CurrentDate
     });
 
     await tsup.build(config);
