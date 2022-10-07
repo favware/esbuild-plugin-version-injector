@@ -1,4 +1,5 @@
 CHANGELOG.md
-.turbo
+node_modules/
 dist/
 coverage/
+.yarn/
