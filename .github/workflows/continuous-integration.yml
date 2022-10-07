@@ -33,7 +33,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
-      # Initializes the CodeQL tools for scanning.
       - name: Initialize CodeQL
         uses: github/codeql-action/init@27ea8f8fe5977c00f5b37e076ab846c5bd783b96 # tag=v2
         with:
@@ -43,20 +42,17 @@ jobs:
         uses: github/codeql-action/analyze@27ea8f8fe5977c00f5b37e076ab846c5bd783b96 # tag=v2
 
   Building:
-    name: Compile source code Node v${{ matrix.node }}
+    name: Compile source code Node v18
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [14, 16, 17]
     steps:
       - name: Checkout Project
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
       - name: Add problem matcher
         run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-      - name: Use Node.js v${{ matrix.node }}
+      - name: Use Node.js v18
         uses: actions/setup-node@17f8bd926464a1afa4c6a11669539e9c1ba77048 # tag=v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
       - name: Install Dependencies
