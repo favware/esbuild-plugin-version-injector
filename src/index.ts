@@ -1,7 +1,7 @@
 import { Result } from '@sapphire/result';
 import type { OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
 import { readFile } from 'node:fs/promises';
-import { resolve } from 'node:path';
+import { extname, resolve } from 'node:path';
 
 export enum VersionOrCurrentDate {
   Version = 'version',
@@ -94,7 +94,32 @@ async function getVersionOrCurrentDate(options: PluginOptions): Promise<string |
   return packageJsonVersion;
 }
 
-async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<OnLoadResult> {
+function getEsbuildLoader(args: OnLoadArgs) {
+  const resolvedExtName = extname(args.path);
+
+  switch (resolvedExtName) {
+    case '.ts':
+    case '.tsx':
+    case '.mts':
+    case '.cts':
+      return 'ts';
+    case '.jsx':
+      return 'tsx';
+    case '.json':
+      return 'json';
+    case '.css':
+      return 'css';
+    case '.txt':
+      return 'text';
+    case '.js':
+    case '.cjs':
+    case '.mjs':
+    default:
+      return 'js';
+  }
+}
+
+async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<OnLoadResult | undefined> {
   const injectTag = getInjectTag(options);
 
   const fileResult = await Result.fromAsync(readFile(args.path, { encoding: 'utf-8' }));
@@ -112,11 +137,13 @@ async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<O
     }
 
     return {
-      contents: unwrappedFileContents
+      pluginData: args.pluginData,
+      contents: unwrappedFileContents,
+      loader: getEsbuildLoader(args)
     };
   }
 
-  return {};
+  return undefined;
 }
 
 export const esbuildPluginVersionInjector = (
@@ -137,6 +164,12 @@ export const esbuildPluginVersionInjector = (
     }
   };
 };
+
+/**
+ * The [esbuild-plugin-version-injector](https://github.com/favware/esbuild-plugin-version-injector/#readme) version
+ * that you are currently using.
+ */
+export const version = '[InternalVi]{{internal-inject}}[/InternalVi]';
 
 interface IMinimalPackageJson {
   version: string;

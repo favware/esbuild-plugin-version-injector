@@ -1,4 +1,5 @@
 import { defineConfig } from 'tsup';
+import { esbuildPluginVersionInjector } from './src';
 
 export default defineConfig({
   clean: true,
@@ -11,5 +12,10 @@ export default defineConfig({
   target: 'es2021',
   tsconfig: 'src/tsconfig.json',
   keepNames: true,
-  treeshake: true
+  treeshake: true,
+  esbuildPlugins: [
+    esbuildPluginVersionInjector({
+      injectTag: '[InternalVi]{{internal-inject}}[/InternalVi]'
+    })
+  ]
 });
