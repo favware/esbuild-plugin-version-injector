@@ -1,3 +1,6 @@
 {
-  "extends": "@sapphire/ts-config/extra-strict-without-decorators"
+  "extends": "@sapphire/ts-config/extra-strict-without-decorators",
+  "compilerOptions": {
+    "incremental": false
+  }
 }
