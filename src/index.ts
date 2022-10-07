@@ -94,6 +94,16 @@ async function getVersionOrCurrentDate(options: PluginOptions): Promise<string |
   return packageJsonVersion;
 }
 
+/**
+ * Resolves the proper [ESBuild content type loader](https://esbuild.github.io/content-types/) based on
+ * the file extension using {@link extname}
+ *
+ * If no match can be found with the file extension, then the JavaScript content type loader is returned.
+ * This matches how ESBuild handles would handle an unspecified loader or unknown file extension.
+ *
+ * @param args The esbuild {@link OnLoadArgs}
+ * @returns The proper content type loader based on the file extension
+ */
 function getEsbuildLoader(args: OnLoadArgs) {
   const resolvedExtName = extname(args.path);
 
