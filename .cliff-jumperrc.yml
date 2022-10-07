@@ -1,0 +1,4 @@
+name: esbuild-plugin-version-injector
+packagePath: .
+commitMessageTemplate: 'chore(release): release {{new-version}}'
+tagTemplate: v{{new-version}}

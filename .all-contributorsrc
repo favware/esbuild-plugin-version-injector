@@ -1,6 +1,6 @@
 {
-	"projectName": "template",
-	"projectOwner": "sapphiredev",
+	"projectName": "esbuild-plugin-version-injector",
+	"projectOwner": "favware",
 	"repoType": "github",
 	"repoHost": "https://github.com",
 	"files": ["README.md"],
