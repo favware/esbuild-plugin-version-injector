@@ -9,19 +9,19 @@ function createConfig(pluginOptions?: PluginOptions): BuildOptions {
       outExtension: {
         '.js': '.mjs'
       },
-      entryPoints: [buildAbsolutePath('./build-in/typescript.mts')]
+      entryPoints: [buildAbsolutePath('./build-in/javascript.mjs')]
     },
     pluginOptions
   );
 }
 
-describe('TS based ESM', () => {
+describe('JS based ESM', () => {
   test('GIVEN no plugin options THEN injects version', async () => {
     const config = createConfig();
 
     await esbuild.build(config);
 
-    await assertFileContent('./build-out/esbuild/typescript.mjs');
+    await assertFileContent('./build-out/esbuild/javascript.mjs');
   });
 
   test('GIVEN versionOrCurrentDate = "current-date" THEN injects current date', async () => {
@@ -31,6 +31,6 @@ describe('TS based ESM', () => {
 
     await esbuild.build(config);
 
-    await assertFileContent('./build-out/esbuild/typescript.mjs');
+    await assertFileContent('./build-out/esbuild/javascript.mjs');
   });
 });
