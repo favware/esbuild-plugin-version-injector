@@ -12,7 +12,7 @@ docs/
 
 # Ignore output folders
 dist/
-tests/build-out/
+tests/fixtures/build-out/
 
 # Ignore heapsnapshot and log files
 *.heapsnapshot
