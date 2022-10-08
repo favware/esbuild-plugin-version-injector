@@ -19,8 +19,8 @@ _This plugin was inspired by
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-    - [With [`esbuild`][esbuild]](#with-esbuildesbuild)
-    - [With [`tsup`][tsup]](#with-tsuptsup)
+    - [With `esbuild`](#with-esbuild)
+    - [With `tsup`](#with-tsup)
   - [File Injection examples](#file-injection-examples)
     - [JavaScript / TypeScript](#javascript--typescript)
     - [JSON](#json)
@@ -28,7 +28,7 @@ _This plugin was inspired by
     - [Text](#text)
   - [Options](#options)
   - [Buy us some doughnuts](#buy-us-some-doughnuts)
-  - [Contributors ✨](#contributors-%E2%9C%A8)
+  - [Contributors ✨](#contributors-)
 
 ## Description
 
