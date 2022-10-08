@@ -1,7 +1,7 @@
 {
   "name": "esbuild-plugin-version-injector",
   "version": "1.0.0",
-  "description": "An esbuild plugin to inject your application's version number and/or today's date into your files",
+  "description": "An esbuild plugin to inject your application's version number or today's date into your files",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

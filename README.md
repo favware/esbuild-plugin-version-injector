@@ -2,8 +2,8 @@
 
 # esbuild-plugin-version-injector
 
-**An esbuild plugin to inject your application's version number and/or today's
-date into your built JavaScript files**
+**An esbuild plugin to inject your application's version number or today's date
+into your files**
 
 [![GitHub](https://img.shields.io/github/license/favware/esbuild-plugin-version-injector)](https://github.com/favware/esbuild-plugin-version-injector/blob/main/LICENSE.md)
 [![npm](https://img.shields.io/npm/v/esbuild-plugin-version-injector?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/esbuild-plugin-version-injector)
