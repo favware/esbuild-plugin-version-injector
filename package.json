@@ -40,7 +40,7 @@
     "@vitest/coverage-c8": "^0.24.0",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.15.10",
-    "eslint": "^8.24.0",
+    "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
@@ -95,5 +95,5 @@
   "eslintConfig": {
     "extends": "@sapphire"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.4"
 }
