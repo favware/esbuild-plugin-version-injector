@@ -25,7 +25,7 @@
     "postpack": "pinst --enable"
   },
   "dependencies": {
-    "@sapphire/result": "^2.5.0"
+    "@sapphire/result": "^2.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
