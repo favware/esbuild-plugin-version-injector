@@ -96,7 +96,7 @@ await defineConfig({
   format: ['cjs'],
   entry: ['./src/index.ts'],
   outDir: './dist',
-  esbuildPlugins: [tsBasedEsbuildPluginVersionInjector()]
+  esbuildPlugins: [esbuildPluginVersionInjector()]
 });
 ```
 
