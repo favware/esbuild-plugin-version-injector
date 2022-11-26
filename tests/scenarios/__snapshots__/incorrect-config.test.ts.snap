@@ -2,7 +2,7 @@
 
 exports[`Incorrect Config > GIVEN incorrect filter THEN warns and uses all filter 1`] = `
 "// tests/fixtures/build-in/typescript.mts
-var version = \\"1.0.0\\";
+var version = \\"1.0.1\\";
 
 export { version };
 "
