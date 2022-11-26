@@ -3,6 +3,8 @@ import type { OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 
+import './StringReplaceAllPolyfill';
+
 export enum VersionOrCurrentDate {
   Version = 'version',
   CurrentDate = 'current-date'

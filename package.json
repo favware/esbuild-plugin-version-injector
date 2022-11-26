@@ -10,6 +10,10 @@
     "require": "./dist/index.js",
     "types": "./dist/index.d.ts"
   },
+  "sideEffects": [
+    "./dist/index.mjs",
+    "./dist/index.js"
+  ],
   "author": "Favware",
   "license": "MIT",
   "scripts": {
