@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.0.1](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.0...v1.0.1) - (2022-11-26)
+
+## 🐛 Bug Fixes
+
+- Fixed support for NodeJS v14.x ([0bd74f6](https://github.com/favware/esbuild-plugin-version-injector/commit/0bd74f68017c7d3889bd22f174566f62e782673f))
+
+## 📝 Documentation
+
+- **readme:** Fix example for tsup ([41dc567](https://github.com/favware/esbuild-plugin-version-injector/commit/41dc56701d1b5925dda433445979fea555a6a04f))
+- **readme:** Fix ToC ([325aef4](https://github.com/favware/esbuild-plugin-version-injector/commit/325aef4d90db9b7c3661f30a03979b0caf2fc97c))
+- **readme:** Add ToC ([c376a17](https://github.com/favware/esbuild-plugin-version-injector/commit/c376a1741b09bbcd11290324598542f8be24da1b))
+- **readme:** Add examples and options ([7796c68](https://github.com/favware/esbuild-plugin-version-injector/commit/7796c687cc5374390a5741cdfa3d17379dd02001))
+
 # [1.0.0](https://github.com/favware/esbuild-plugin-version-injector/tree/v1.0.0) - (2022-10-07)
 
 ## 🐛 Bug Fixes
