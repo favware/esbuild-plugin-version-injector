@@ -20,8 +20,10 @@ jobs:
           node-version: 16
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
+      - name: Replace name in package.json
+        run: cat <<< $(jq '.name = "@favware/esbuild-plugin-version-injector"' package.json) > package.json
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn
       - name: Build package
         run: yarn build
       - name: Publish to GitHub
