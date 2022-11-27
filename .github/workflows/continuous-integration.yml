@@ -63,30 +63,9 @@ jobs:
         run: yarn build
       - name: Test Code
         run: yarn test
-      - name: Store code coverage report
-        if: ${{ matrix.node == '18' }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: coverage
-          path: coverage/
-
-  Upload_Coverage_Report:
-    name: Upload coverage report to codecov
-    needs: [BuildingAndTesting]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
-      - name: Download Coverage report
-        uses: actions/download-artifact@v3
-        with:
-          name: coverage
-          path: coverage/
       - name: Codecov Upload
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: coverage/
-          fail_ci_if_error: true
+          files: coverage/${{ matrix.node }}/cobertura-coverage.xml
+          flags: ${{ matrix.node }}

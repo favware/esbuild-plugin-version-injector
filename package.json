@@ -95,8 +95,5 @@
   "eslintConfig": {
     "extends": "@sapphire"
   },
-  "packageManager": "yarn@3.3.0",
-  "volta": {
-    "node": "14.21.1"
-  }
+  "packageManager": "yarn@3.3.0"
 }
