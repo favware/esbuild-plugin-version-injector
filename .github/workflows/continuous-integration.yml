@@ -63,9 +63,9 @@ jobs:
         run: yarn build
       - name: Test Code
         run: yarn test
-      - name: Codecov Upload
+      - name: Codecov Upload ${{ matrix.node }}
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage/${{ matrix.node }}/cobertura-coverage.xml
+          files: coverage/cobertura-coverage.xml
           flags: ${{ matrix.node }}
