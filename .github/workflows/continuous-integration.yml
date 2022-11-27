@@ -69,3 +69,4 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage/cobertura-coverage.xml
           flags: ${{ matrix.node }}
+          fail_ci_if_error: true
