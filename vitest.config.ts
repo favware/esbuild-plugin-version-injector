@@ -7,7 +7,7 @@ export default defineConfig({
     threads: false,
     coverage: {
       enabled: true,
-      reporter: ['text', 'lcov', 'clover']
+      reporter: ['text', 'lcov', 'cobertura']
     }
   },
   esbuild: {

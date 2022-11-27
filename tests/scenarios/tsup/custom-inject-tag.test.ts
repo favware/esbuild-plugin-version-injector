@@ -12,7 +12,7 @@ function createConfig(pluginOptions?: PluginOptions): Options {
   );
 }
 
-describe.only('Custom Version Inject Tag', () => {
+describe('Custom Version Inject Tag', () => {
   test('GIVEN custom tag THEN injects version', async () => {
     const config = createConfig({
       injectTag: '[VersionInject][/VersionInject]'
