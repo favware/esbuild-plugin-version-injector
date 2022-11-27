@@ -1,3 +1,5 @@
+import { regExpEsc } from './regexpEscape';
+
 /**
  * String.prototype.replaceAll() polyfill
  * https://gomakethings.com/how-to-replace-a-section-of-a-string-with-another-one-with-vanilla-js/
@@ -15,6 +17,6 @@ if (!String.prototype.replaceAll) {
 
     // If a string
     // @ts-ignore newStr can be both a string or a function returning a string
-    return this.replace(new RegExp(str, 'g'), newStr);
+    return this.replace(new RegExp(regExpEsc(str), 'g'), newStr);
   };
 }
