@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.0.2](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.1...v1.0.2) - (2022-11-27)
+
+## 🐛 Bug Fixes
+
+- Regexp escape for Node 14 polyfill (#18) ([bfb809d](https://github.com/favware/esbuild-plugin-version-injector/commit/bfb809deaecf0e6dd7ae9134734c801e3ed4c604))
+
 # [1.0.1](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.0...v1.0.1) - (2022-11-26)
 
 ## 🐛 Bug Fixes
