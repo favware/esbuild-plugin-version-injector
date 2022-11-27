@@ -41,27 +41,8 @@ jobs:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
 
-  Building:
-    name: Compile source code Node v18
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Project
-        uses: actions/checkout@v3
-      - name: Add problem matcher
-        run: echo "::add-matcher::.github/problemMatchers/tsc.json"
-      - name: Use Node.js v18
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: yarn
-          registry-url: https://registry.yarnpkg.com/
-      - name: Install Dependencies
-        run: yarn --immutable
-      - name: Build Code
-        run: yarn build
-
-  Testing:
-    name: Testing with node v${{ matrix.node }}
+  BuildingAndTesting:
+    name: Building and Testing with node v${{ matrix.node }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -78,6 +59,8 @@ jobs:
           registry-url: https://registry.yarnpkg.com/
       - name: Install Dependencies
         run: yarn --immutable
+      - name: Build Code
+        run: yarn build
       - name: Test Code
         run: yarn test
       - name: Store code coverage report
@@ -89,7 +72,7 @@ jobs:
 
   Upload_Coverage_Report:
     name: Upload coverage report to codecov
-    needs: [Testing]
+    needs: [BuildingAndTesting]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
