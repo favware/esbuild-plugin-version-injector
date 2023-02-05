@@ -111,11 +111,11 @@ function getEsbuildLoader(args: OnLoadArgs) {
 
   switch (resolvedExtName) {
     case '.ts':
-    case '.tsx':
     case '.mts':
     case '.cts':
       return 'ts';
     case '.jsx':
+    case '.tsx':
       return 'tsx';
     case '.json':
       return 'json';
