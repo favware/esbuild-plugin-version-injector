@@ -28,7 +28,7 @@ _This plugin was inspired by
     - [Text](#text)
   - [Options](#options)
   - [Buy us some doughnuts](#buy-us-some-doughnuts)
-  - [Contributors ✨](#contributors-)
+  - [Contributors](#contributors)
 
 ## Description
 
@@ -185,19 +185,15 @@ method of choice.
 |    Ethereum     |   `0xF653F666903cd8739030D2721bF01095896F5D6E`    |
 |    LiteCoin     |       `LZHvBkaJqKJRa8N7Dyu41Jd1PDBAofCik6`        |
 
-## Contributors ✨
+## Contributors
 
-Thanks goes to these wonderful people
-([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Please make sure to read the [Contributing Guide][contributing] before making a
+pull request.
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
+Thank you to all the people who already contributed to Sapphire!
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+<a href="https://github.com/favware/esbuild-plugin-version-injector/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=favware/esbuild-plugin-version-injector" />
+</a>
 
-This project follows the
-[all-contributors](https://github.com/all-contributors/all-contributors)
-specification. Contributions of any kind welcome!
+[contributing]: .github/CONTRIBUTING.md
