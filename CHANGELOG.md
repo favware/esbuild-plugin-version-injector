@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.0.3](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.2...v1.0.3) - (2023-02-06)
+
+## 🐛 Bug Fixes
+
+- Change loader for .tsx files (#30) ([4cdb017](https://github.com/favware/esbuild-plugin-version-injector/commit/4cdb0177a63903cff6036b209ea9833f1248fb9d))
+
+## 📝 Documentation
+
+- **readme:** Remove all-contributors ([f238480](https://github.com/favware/esbuild-plugin-version-injector/commit/f23848070653ec1c6ee0118a5bdf8a3a16c5d336))
+
+## 🧪 Testing
+
+- Update snapshots for new versions ([40786af](https://github.com/favware/esbuild-plugin-version-injector/commit/40786af1b3625b4b230d6bc0527f1fe12548c825))
+
 # [1.0.2](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.1...v1.0.2) - (2022-11-27)
 
 ## 🐛 Bug Fixes
