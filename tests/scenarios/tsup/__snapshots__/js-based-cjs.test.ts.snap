@@ -12,7 +12,7 @@ var __commonJS = (cb, mod) => function __require() {
 var require_javascript = __commonJS({
   \\"tests/fixtures/build-in/javascript.cjs\\"(exports, module) {
     module.exports = {
-      version: \\"1.0.2\\"
+      version: \\"1.0.3\\"
     };
   }
 });

@@ -5,7 +5,7 @@ exports[`JS based CJS > GIVEN no plugin options THEN injects version 1`] = `
 
 // tests/fixtures/build-in/javascript.cjs
 module.exports = {
-  version: \\"1.0.2\\"
+  version: \\"1.0.3\\"
 };
 "
 `;
