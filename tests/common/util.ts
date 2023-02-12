@@ -4,7 +4,6 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { defineConfig, type Options as TsupOptions } from 'tsup';
 import { esbuildPluginVersionInjector, type PluginOptions } from '../../dist/index.js';
-import { esbuildPluginVersionInjector as tsBasedEsbuildPluginVersionInjector } from '../../src/index';
 
 export function createEsbuildConfig(buildOptions: BuildOptions, pluginOptions?: PluginOptions): BuildOptions {
   return {
@@ -19,16 +18,22 @@ export function createEsbuildConfig(buildOptions: BuildOptions, pluginOptions?: 
 export function createTsupConfig(tsupOptions: TsupOptions, pluginOptions?: PluginOptions): TsupOptions {
   return defineConfig({
     ...tsupOptions,
-    dts: false,
     clean: false,
+    dts: false,
     minify: false,
     skipNodeModulesBundle: true,
     sourcemap: false,
+    target: 'es2021',
+    tsconfig: buildAbsolutePath('../fixtures/build-in/tsconfig.json'),
     keepNames: true,
+    treeshake: true,
     outDir: buildAbsolutePath('../fixtures/build-out/tsup'),
     bundle: true,
     platform: 'node',
-    esbuildPlugins: [tsBasedEsbuildPluginVersionInjector(pluginOptions)],
+    splitting: false,
+    config: false,
+    silent: true,
+    esbuildPlugins: [esbuildPluginVersionInjector(pluginOptions)],
     outExtension(context) {
       switch (context.format) {
         case 'cjs':
