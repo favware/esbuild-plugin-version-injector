@@ -1,0 +1,9 @@
+{
+  "extends": "@sapphire/ts-config/extra-strict-without-decorators",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "../build-out",
+    "incremental": false
+  },
+  "include": ["."]
+}
