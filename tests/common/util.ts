@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { defineConfig, type Options as TsupOptions } from 'tsup';
 import { esbuildPluginVersionInjector, type PluginOptions } from '../../dist/index.js';
+import { esbuildPluginVersionInjector as tsBasedEsbuildPluginVersionInjector } from '../../src/index';
 
 export function createEsbuildConfig(buildOptions: BuildOptions, pluginOptions?: PluginOptions): BuildOptions {
   return {
@@ -33,7 +34,7 @@ export function createTsupConfig(tsupOptions: TsupOptions, pluginOptions?: Plugi
     splitting: false,
     config: false,
     silent: true,
-    esbuildPlugins: [esbuildPluginVersionInjector(pluginOptions)],
+    esbuildPlugins: [tsBasedEsbuildPluginVersionInjector(pluginOptions)],
     outExtension(context) {
       switch (context.format) {
         case 'cjs':
