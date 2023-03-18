@@ -1,5 +1,5 @@
 import { Result } from '@sapphire/result';
-import type { BuildResult, OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
+import type { BuildResult, OnEndResult, OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 
@@ -157,7 +157,7 @@ async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<O
 
   return undefined;
 }
-async function handleOnEnd(results: BuildResult, filter: RegExp, options: PluginOptions) {
+async function handleOnEnd(results: BuildResult, filter: RegExp, options: PluginOptions): Promise<OnEndResult> {
   const injectTag = getInjectTag(options);
 
   for (const file of results.outputFiles ?? []) {
@@ -179,6 +179,11 @@ async function handleOnEnd(results: BuildResult, filter: RegExp, options: Plugin
       }
     }
   }
+
+  return {
+    errors: [],
+    warnings: []
+  };
 }
 
 export const esbuildPluginVersionInjector = (
