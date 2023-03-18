@@ -157,6 +157,7 @@ async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<O
 
   return undefined;
 }
+
 async function handleOnEnd(results: BuildResult, filter: RegExp, options: PluginOptions): Promise<OnEndResult> {
   const injectTag = getInjectTag(options);
 
