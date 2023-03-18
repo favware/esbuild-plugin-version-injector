@@ -1,5 +1,5 @@
 import { Result } from '@sapphire/result';
-import type { OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
+import type { BuildResult, OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 
@@ -158,6 +158,30 @@ async function handleOnLoad(args: OnLoadArgs, options: PluginOptions): Promise<O
   return undefined;
 }
 
+async function handleOnEnd(results: BuildResult, filter: RegExp, options: PluginOptions): Promise<void> {
+  const injectTag = getInjectTag(options);
+
+  for (const file of results.outputFiles ?? []) {
+    if (!filter.test(file.path)) {
+      continue;
+    }
+
+    const hasInjectTag = file.text.includes(injectTag);
+
+    if (hasInjectTag) {
+      const versionOrCurrentDate = await getVersionOrCurrentDate(options);
+
+      if (versionOrCurrentDate) {
+        const decoded = new TextDecoder().decode(file.contents);
+
+        const replaced = decoded.replaceAll(injectTag, versionOrCurrentDate);
+
+        file.contents = new TextEncoder().encode(replaced);
+      }
+    }
+  }
+}
+
 export const esbuildPluginVersionInjector = (
   options: PluginOptions = {
     filter: /.*/,
@@ -172,7 +196,11 @@ export const esbuildPluginVersionInjector = (
   return {
     name: 'esbuild-plugin-version-injector',
     setup(build) {
+      // This is used when this plugin is the first loader to be used (tsup and similar will load swc first which will make this never be called, BUT it will call onEnd)
       build.onLoad({ filter, namespace }, (args) => handleOnLoad(args, options));
+
+      // This will process all files at the end, if a previous loader has taken care of loading+transforming
+      build.onEnd((results) => handleOnEnd(results, filter, options));
     }
   };
 };
