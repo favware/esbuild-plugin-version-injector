@@ -1,11 +1,11 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`JS based CJS > GIVEN no plugin options THEN injects version 1`] = `
 "\\"use strict\\";
 
 // tests/fixtures/build-in/javascript.cjs
 module.exports = {
-  version: \\"1.0.3\\"
+  version: \\"1.0.4\\"
 };
 "
 `;

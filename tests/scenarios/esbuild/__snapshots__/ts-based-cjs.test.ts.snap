@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TS based CJS > GIVEN no plugin options THEN injects version 1`] = `
 "\\"use strict\\";
@@ -26,7 +26,7 @@ __export(typescript_exports, {
   version: () => version
 });
 module.exports = __toCommonJS(typescript_exports);
-var version = \\"1.0.3\\";
+var version = \\"1.0.4\\";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   version

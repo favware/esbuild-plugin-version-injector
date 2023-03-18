@@ -1,8 +1,8 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Custom Version Inject Tag > GIVEN custom tag THEN injects version 1`] = `
 "// tests/fixtures/build-in/custom-inject-tag.mts
-var version = \\"1.0.3\\";
+var version = \\"1.0.4\\";
 export {
   version
 };

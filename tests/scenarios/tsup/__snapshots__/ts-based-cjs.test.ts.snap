@@ -1,10 +1,10 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`TS based CJS > GIVEN no plugin options THEN injects version 1`] = `
 "'use strict';
 
 // tests/fixtures/build-in/typescript.cts
-var version = \\"1.0.3\\";
+var version = \\"1.0.4\\";
 
 exports.version = version;
 "
