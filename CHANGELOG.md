@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.1.0](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.4...v1.1.0) - (2023-03-18)
+
+## 🚀 Features
+
+- Fallback for esbuild results when this isn't solve loader (#38) ([1ee1356](https://github.com/favware/esbuild-plugin-version-injector/commit/1ee13568f85d247b67b08ce699a31e34fea74d61))
+
+## 🧪 Testing
+
+- Update test snapshots ([bfb9c92](https://github.com/favware/esbuild-plugin-version-injector/commit/bfb9c92810de1d39f069cefc3d6c5b133b51041a))
+
 # [1.0.4](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.3...v1.0.4) - (2023-03-18)
 
 ## 🐛 Bug Fixes
