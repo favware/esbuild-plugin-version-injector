@@ -1,5 +1,5 @@
 import { Result } from '@sapphire/result';
-import type { BuildResult, OnEndResult, OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
+import type { BuildResult, OnLoadArgs, OnLoadOptions, OnLoadResult, Plugin } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import { extname, resolve } from 'node:path';
 
