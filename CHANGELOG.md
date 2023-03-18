@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.0.4](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.3...v1.0.4) - (2023-03-18)
+
+## 🐛 Bug Fixes
+
+- Declare string type for version export ([3733269](https://github.com/favware/esbuild-plugin-version-injector/commit/3733269f04285f3ace0ca8d27fd2bbda07a145dc))
+
+## 🧪 Testing
+
+- Fix coverage ([9b93fae](https://github.com/favware/esbuild-plugin-version-injector/commit/9b93fae37a9704aaad9383bcfc54a2b2ef99cb3e))
+- Update snapshots for new versions ([1163553](https://github.com/favware/esbuild-plugin-version-injector/commit/11635537a5a3bf1c6148adf356632a4dddc033d5))
+
 # [1.0.3](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.2...v1.0.3) - (2023-02-06)
 
 ## 🐛 Bug Fixes
