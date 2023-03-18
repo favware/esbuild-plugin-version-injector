@@ -181,7 +181,8 @@ export const esbuildPluginVersionInjector = (
  * The [esbuild-plugin-version-injector](https://github.com/favware/esbuild-plugin-version-injector/#readme) version
  * that you are currently using.
  */
-export const version = '[InternalVi]{{internal-inject}}[/InternalVi]';
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
+export const version: string = '[InternalVi]{{internal-inject}}[/InternalVi]';
 
 interface IMinimalPackageJson {
   version: string;
