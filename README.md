@@ -190,7 +190,7 @@ method of choice.
 Please make sure to read the [Contributing Guide][contributing] before making a
 pull request.
 
-Thank you to all the people who already contributed to Sapphire!
+Thank you to all the people who already contributed!
 
 <a href="https://github.com/favware/esbuild-plugin-version-injector/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=favware/esbuild-plugin-version-injector" />
