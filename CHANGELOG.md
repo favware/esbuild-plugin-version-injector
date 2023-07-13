@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.2.0](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.1.0...v1.2.0) - (2023-07-13)
+
+## 🐛 Bug Fixes
+
+- **deps:** Update all non-major dependencies ([b05c2ef](https://github.com/favware/esbuild-plugin-version-injector/commit/b05c2effc214a4ae4208455807575688f96ca446))
+
+## 🚀 Features
+
+- Introduce `disableOnLoadTrigger` option (#65) ([9ce2e90](https://github.com/favware/esbuild-plugin-version-injector/commit/9ce2e905378acd9e1fe478e6ba6fb787df4be707))
+
+## 🧪 Testing
+
+- Update snapshots for new versions ([65c70eb](https://github.com/favware/esbuild-plugin-version-injector/commit/65c70eb2bec7040991572c7609076658906691b6))
+
 # [1.1.0](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.0.4...v1.1.0) - (2023-03-18)
 
 ## 🚀 Features
