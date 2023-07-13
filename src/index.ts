@@ -47,6 +47,18 @@ export interface PluginOptions {
    * @default './package.json'
    */
   packageJsonPath?: string;
+  /**
+   * Whether to disable the `onLoad` trigger, which is used by default.
+   *
+   * In most cases you will not want to set this to `true`,
+   * but it can be useful if you have specified a custom `loader` mapper in `esbuild` through
+   * ```ts
+   * esbuild.build({ ...otherOptions, loader: { '.js': 'jsx' } });
+   * ```
+   *
+   * @default undefined
+   */
+  disableOnLoadTrigger?: boolean;
 }
 
 function getFilter(options: PluginOptions): RegExp {
@@ -196,8 +208,10 @@ export const esbuildPluginVersionInjector = (
   return {
     name: 'esbuild-plugin-version-injector',
     setup(build) {
-      // This is used when this plugin is the first loader to be used (tsup and similar will load swc first which will make this never be called, BUT it will call onEnd)
-      build.onLoad({ filter, namespace }, (args) => handleOnLoad(args, options));
+      if (!options.disableOnLoadTrigger) {
+        // This is used when this plugin is the first loader to be used (tsup and similar will load swc first which will make this never be called, BUT it will call onEnd)
+        build.onLoad({ filter, namespace }, (args) => handleOnLoad(args, options));
+      }
 
       // This will process all files at the end, if a previous loader has taken care of loading+transforming
       build.onEnd((results) => handleOnEnd(results, filter, options));

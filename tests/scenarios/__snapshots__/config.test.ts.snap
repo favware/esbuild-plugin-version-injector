@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Config > GIVEN disableOnLoadTrigger=true THEN does not run onLoad hook 1`] = `
+"// tests/fixtures/build-in/typescript.mts
+var version = \\"1.1.0\\";
+
+export { version };
+"
+`;
+
+exports[`Config > GIVEN incorrect filter THEN warns and uses all filter 1`] = `
+"// tests/fixtures/build-in/typescript.mts
+var version = \\"1.1.0\\";
+
+export { version };
+"
+`;
