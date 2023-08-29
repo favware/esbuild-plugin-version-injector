@@ -7,5 +7,6 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["src", "tests", "scripts", "vitest.config.ts", "tsup.config.ts"]
+  "include": ["src", "tests", "scripts", "vitest.config.ts", "tsup.config.ts"],
+  "exclude": ["tests/fixtures"]
 }
