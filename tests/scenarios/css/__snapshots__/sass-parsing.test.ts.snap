@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 1`] = `
+"/* tests/fixtures/build-in/styles.scss */
+.myClass {
+  content: \\"[VI]{{inject}}[/VI]\\";
+}
+.start-test-btn {
+  border: 2px solid #A6A6A6;
+  border-radius: 14px;
+  color: #474747 !important;
+  padding: 1rem 2rem;
+}
+.start-test-btn:hover {
+  border-color: #474747;
+}
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-end;
+}
+.headline__start {
+  margin: 5rem 0;
+}
+.headline__avatar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .headline__avatar {
+    display: block;
+  }
+}
+.headline__avatar_mobile {
+  display: flex;
+  justify-content: center;
+}
+.headline__avatar_mobile > img {
+  height: 400px;
+}
+@media (min-width: 768px) {
+  .headline__avatar_mobile {
+    display: none;
+  }
+  .headline__avatar_mobile > img {
+    height: 600px;
+  }
+}
+"
+`;
+
+exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 2`] = `
+"/* tests/fixtures/build-mid/css/styles.css */
+.myClass {
+  content: \\"1.2.0\\";
+}
+.start-test-btn {
+  border: 2px solid #A6A6A6;
+  border-radius: 14px;
+  color: #474747 !important;
+  padding: 1rem 2rem;
+}
+.start-test-btn:hover {
+  border-color: #474747;
+}
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-end;
+}
+.headline__start {
+  margin: 5rem 0;
+}
+.headline__avatar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .headline__avatar {
+    display: block;
+  }
+}
+.headline__avatar_mobile {
+  display: flex;
+  justify-content: center;
+}
+.headline__avatar_mobile > img {
+  height: 400px;
+}
+@media (min-width: 768px) {
+  .headline__avatar_mobile {
+    display: none;
+  }
+  .headline__avatar_mobile > img {
+    height: 600px;
+  }
+}
+"
+`;

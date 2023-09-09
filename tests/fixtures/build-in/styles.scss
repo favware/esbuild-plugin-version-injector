@@ -1,0 +1,48 @@
+.myClass {
+  content: '[VI]{{inject}}[/VI]';
+}
+
+.start-test-btn {
+  border: 2px solid #a6a6a6;
+  border-radius: 14px;
+  color: #474747 !important;
+  padding: 1rem 2rem;
+
+  &:hover {
+    border-color: #474747;
+  }
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: flex-end;
+
+  &__start {
+    margin: 5rem 0;
+  }
+
+  &__avatar {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__avatar_mobile {
+    display: flex;
+    justify-content: center;
+
+    & > img {
+      height: 400px;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+      & > img {
+        height: 600px;
+      }
+    }
+  }
+}
