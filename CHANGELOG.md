@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.2.1](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.2.0...v1.2.1) - (2023-09-09)
+
+## 🏠 Refactor
+
+- Move exports to the bottom to have them all in 1 place ([4bfe592](https://github.com/favware/esbuild-plugin-version-injector/commit/4bfe5927549bc26ad2cda4d56ec35a440ea60378))
+
+## 🐛 Bug Fixes
+
+- Add missing css preprocessor file extensions to loader ([f87374a](https://github.com/favware/esbuild-plugin-version-injector/commit/f87374a0712931e731ba03f4a098b36a2dc87325))
+
+## 📝 Documentation
+
+- **readme:** Add note about CSS preprocessors ([9843247](https://github.com/favware/esbuild-plugin-version-injector/commit/98432472ffbb309eada6e87e7c987358d5604e9d))
+
+## 🧪 Testing
+
+- Add test to cover scss->css conversion ([ec310fb](https://github.com/favware/esbuild-plugin-version-injector/commit/ec310fb0731470d723e93ce86ebc43a499c70250))
+
 # [1.2.0](https://github.com/favware/esbuild-plugin-version-injector/compare/v1.1.0...v1.2.0) - (2023-07-13)
 
 ## 🐛 Bug Fixes
