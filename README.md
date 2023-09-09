@@ -133,6 +133,17 @@ export const version: string = '[VI]{{inject}}[/VI]';
 }
 ```
 
+**_A note regarding using CSS preprocessors (SASS / LESS / Stylus / etc)_**:
+When using a CSS preprocessor you might be using an esbuild plugin like
+[`esbuild-sass-plugin`](https://www.npmjs.com/package/esbuild-sass-plugin). This
+causes the CSS to be processed before this plugin can inject the version number
+and at the moment esbuild now will no longer pass the file to be processed by
+this plugin. To solve this you will have to build your code twice with esbuild,
+once with the CSS preprocessor plugin and once with this plugin. This can be
+done by using the `build` function twice, or by using the `buildSync` function
+twice. An example of this can be found at the test to cover this case
+[here](./tests/scenarios/css/sass-parsing.test.ts).
+
 ### Text
 
 ```txt
