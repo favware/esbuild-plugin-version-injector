@@ -6,7 +6,7 @@ exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 1`] = `
   content: \\"[VI]{{inject}}[/VI]\\";
 }
 .start-test-btn {
-  border: 2px solid #A6A6A6;
+  border: 2px solid #a6a6a6;
   border-radius: 14px;
   color: #474747 !important;
   padding: 1rem 2rem;
@@ -52,10 +52,10 @@ exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 1`] = `
 exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 2`] = `
 "/* tests/fixtures/build-mid/css/styles.css */
 .myClass {
-  content: \\"1.2.0\\";
+  content: \\"1.2.1\\";
 }
 .start-test-btn {
-  border: 2px solid #A6A6A6;
+  border: 2px solid #a6a6a6;
   border-radius: 14px;
   color: #474747 !important;
   padding: 1rem 2rem;

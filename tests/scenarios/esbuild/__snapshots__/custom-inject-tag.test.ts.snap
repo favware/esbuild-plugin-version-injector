@@ -2,7 +2,7 @@
 
 exports[`Custom Version Inject Tag > GIVEN custom tag THEN injects version 1`] = `
 "// tests/fixtures/build-in/custom-inject-tag.mts
-var version = \\"1.2.0\\";
+var version = \\"1.2.1\\";
 export {
   version
 };
