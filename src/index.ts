@@ -132,6 +132,10 @@ function getEsbuildLoader(args: OnLoadArgs) {
     case '.json':
       return 'json';
     case '.css':
+    case '.scss':
+    case '.sass':
+    case '.less':
+    case '.styl':
       return 'css';
     case '.txt':
       return 'text';
