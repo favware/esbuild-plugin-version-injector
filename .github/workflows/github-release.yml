@@ -23,7 +23,7 @@ jobs:
       - name: Replace name in package.json
         run: cat <<< $(jq '.name = "@favware/esbuild-plugin-version-injector"' package.json) > package.json
       - name: Install Dependencies
-        run: yarn
+        run: yarn --immutable=false
       - name: Build package
         run: yarn build
       - name: Publish to GitHub
