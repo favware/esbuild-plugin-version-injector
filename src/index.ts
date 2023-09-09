@@ -5,12 +5,12 @@ import { extname, resolve } from 'node:path';
 
 import './StringReplaceAllPolyfill';
 
-export enum VersionOrCurrentDate {
+enum VersionOrCurrentDate {
   Version = 'version',
   CurrentDate = 'current-date'
 }
 
-export interface PluginOptions {
+interface PluginOptions {
   /**
    * The [esbuild filter](https://esbuild.github.io/plugins/#filters) to
    * apply for the filtering of files to parse with this plugin
@@ -194,14 +194,14 @@ async function handleOnEnd(results: BuildResult, filter: RegExp, options: Plugin
   }
 }
 
-export const esbuildPluginVersionInjector = (
+function esbuildPluginVersionInjector(
   options: PluginOptions = {
     filter: /.*/,
     versionOrCurrentDate: VersionOrCurrentDate.Version,
     injectTag: '[VI]{{inject}}[/VI]',
     packageJsonPath: './package.json'
   }
-): Plugin => {
+): Plugin {
   const filter = getFilter(options);
   const { namespace } = options;
 
@@ -217,17 +217,19 @@ export const esbuildPluginVersionInjector = (
       build.onEnd((results) => handleOnEnd(results, filter, options));
     }
   };
-};
+}
 
 /**
  * The [esbuild-plugin-version-injector](https://github.com/favware/esbuild-plugin-version-injector/#readme) version
  * that you are currently using.
  */
 // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-export const version: string = '[InternalVi]{{internal-inject}}[/InternalVi]';
+const version: string = '[InternalVi]{{internal-inject}}[/InternalVi]';
 
 interface IMinimalPackageJson {
   version: string;
   name: string;
   description?: string;
 }
+
+export { VersionOrCurrentDate, esbuildPluginVersionInjector, version, type PluginOptions };
