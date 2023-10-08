@@ -35,15 +35,15 @@
     "@sapphire/eslint-config": "^5.0.2",
     "@sapphire/prettier-config": "^2.0.0",
     "@sapphire/ts-config": "^5.0.0",
-    "@types/node": "^20.8.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
+    "@types/node": "^20.8.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "@vitest/coverage-v8": "^0.34.6",
     "autoprefixer": "^10.4.16",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.19.4",
-    "esbuild-sass-plugin": "^2.15.0",
-    "eslint": "^8.50.0",
+    "esbuild-sass-plugin": "^2.16.0",
+    "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
@@ -53,7 +53,7 @@
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
+    "vite": "^4.4.11",
     "vitest": "^0.34.6"
   },
   "repository": {
@@ -100,5 +100,5 @@
   "eslintConfig": {
     "extends": "@sapphire"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.4"
 }
