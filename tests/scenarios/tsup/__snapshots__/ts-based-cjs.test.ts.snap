@@ -4,7 +4,7 @@ exports[`TS based CJS > GIVEN no plugin options THEN injects version 1`] = `
 "'use strict';
 
 // tests/fixtures/build-in/typescript.cts
-var version = \\"1.2.1\\";
+var version = "1.2.1";
 
 exports.version = version;
 "
@@ -14,7 +14,7 @@ exports[`TS based CJS > GIVEN versionOrCurrentDate = "current-date" THEN injects
 "'use strict';
 
 // tests/fixtures/build-in/typescript.cts
-var version = \\"2022-02-01T14:30:30.000Z\\";
+var version = "2022-02-01T14:30:30.000Z";
 
 exports.version = version;
 "

@@ -3,7 +3,7 @@
 exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 1`] = `
 "/* tests/fixtures/build-in/styles.scss */
 .myClass {
-  content: \\"[VI]{{inject}}[/VI]\\";
+  content: "[VI]{{inject}}[/VI]";
 }
 .start-test-btn {
   border: 2px solid #a6a6a6;
@@ -52,7 +52,7 @@ exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 1`] = `
 exports[`SCSS to CSS > GIVEN no plugin options THEN injects version 2`] = `
 "/* tests/fixtures/build-mid/css/styles.css */
 .myClass {
-  content: \\"1.2.1\\";
+  content: "1.2.1";
 }
 .start-test-btn {
   border: 2px solid #a6a6a6;

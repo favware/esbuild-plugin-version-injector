@@ -10,9 +10,9 @@ var __commonJS = (cb, mod) => function __require() {
 
 // tests/fixtures/build-in/javascript.cjs
 var require_javascript = __commonJS({
-  \\"tests/fixtures/build-in/javascript.cjs\\"(exports, module) {
+  "tests/fixtures/build-in/javascript.cjs"(exports, module) {
     module.exports = {
-      version: \\"1.2.1\\"
+      version: "1.2.1"
     };
   }
 });
@@ -32,9 +32,9 @@ var __commonJS = (cb, mod) => function __require() {
 
 // tests/fixtures/build-in/javascript.cjs
 var require_javascript = __commonJS({
-  \\"tests/fixtures/build-in/javascript.cjs\\"(exports, module) {
+  "tests/fixtures/build-in/javascript.cjs"(exports, module) {
     module.exports = {
-      version: \\"2022-02-01T14:30:30.000Z\\"
+      version: "2022-02-01T14:30:30.000Z"
     };
   }
 });
