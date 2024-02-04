@@ -40,7 +40,7 @@
     "autoprefixer": "^10.4.17",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.20.0",
-    "esbuild-sass-plugin": "^2.16.1",
+    "esbuild-sass-plugin": "^3.0.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
