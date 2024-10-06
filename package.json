@@ -36,7 +36,7 @@
     "@types/node": "^20.16.10",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
-    "@vitest/coverage-v8": "^2.1.1",
+    "@vitest/coverage-v8": "^2.1.2",
     "autoprefixer": "^10.4.20",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.24.0",
@@ -50,7 +50,7 @@
     "tsup": "^8.3.0",
     "typescript": "^5.5.2",
     "vite": "^5.4.8",
-    "vitest": "^2.1.1"
+    "vitest": "^2.1.2"
   },
   "repository": {
     "type": "git",
