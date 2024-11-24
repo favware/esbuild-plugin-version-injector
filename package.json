@@ -27,13 +27,13 @@
     "@sapphire/result": "^2.7.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@favware/cliff-jumper": "5.0.0",
     "@sapphire/eslint-config": "^5.0.5",
     "@sapphire/prettier-config": "^2.0.0",
     "@sapphire/ts-config": "^5.0.1",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.3",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "@vitest/coverage-v8": "^2.1.5",
@@ -96,5 +96,5 @@
   "eslintConfig": {
     "extends": "@sapphire"
   },
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@4.5.2"
 }
