@@ -1,11 +1,10 @@
-import { defineConfig } from 'tsup';
+import { defineConfig, Options } from 'tsup';
 import { esbuildPluginVersionInjector } from './src';
 
-export default defineConfig({
+const baseOptions: Options = {
   clean: true,
   dts: true,
   entry: ['src/index.ts'],
-  format: ['esm', 'cjs'],
   minify: false,
   skipNodeModulesBundle: true,
   sourcemap: true,
@@ -18,4 +17,19 @@ export default defineConfig({
       injectTag: '[InternalVi]{{internal-inject}}[/InternalVi]'
     })
   ]
-});
+};
+
+export default [
+  defineConfig({
+    ...baseOptions,
+    outDir: 'dist/cjs',
+    format: 'cjs',
+    outExtension: () => ({ js: '.cjs' })
+  }),
+  defineConfig({
+    ...baseOptions,
+    outDir: 'dist/esm',
+    format: 'esm',
+    outExtension: () => ({ js: '.mjs' })
+  })
+];

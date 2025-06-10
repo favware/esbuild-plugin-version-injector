@@ -3,7 +3,7 @@ import type { BuildOptions } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { defineConfig, type Options as TsupOptions } from 'tsup';
-import { esbuildPluginVersionInjector, type PluginOptions } from '../../dist/index.js';
+import { esbuildPluginVersionInjector, type PluginOptions } from '../../dist/esm/index.mjs';
 import { esbuildPluginVersionInjector as tsBasedEsbuildPluginVersionInjector } from '../../src/index';
 
 export function createEsbuildConfig(buildOptions: BuildOptions, pluginOptions?: PluginOptions): BuildOptions {

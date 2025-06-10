@@ -2,13 +2,19 @@
   "name": "esbuild-plugin-version-injector",
   "version": "1.2.1",
   "description": "An esbuild plugin to inject your application's version number or today's date into your files",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/cjs/index.d.cts",
   "exports": {
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js",
-    "types": "./dist/index.d.ts"
+    "import": {
+      "types": "./dist/esm/index.d.mts",
+      "default": "./dist/esm/index.mjs"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    }
   },
   "author": "Favware",
   "license": "MIT",
@@ -18,7 +24,7 @@
     "format": "prettier --write {src,tests}/**/*.ts",
     "test": "vitest run",
     "test:clean": "node scripts/clean-test-output.mjs",
-    "build": "tsup",
+    "build": "tsup && yarn exec mv dist/esm/index.d.ts dist/esm/index.d.mts",
     "bump": "yarn build && cliff-jumper && yarn test -u",
     "check-update": "cliff-jumper --dry-run",
     "prepack": "yarn build"
@@ -48,7 +54,7 @@
     "postcss": "^8.5.4",
     "prettier": "^3.5.3",
     "tsup": "^8.5.0",
-    "typescript": "^5.5.2",
+    "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vitest": "^3.2.3"
   },
