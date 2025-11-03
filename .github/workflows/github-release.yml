@@ -17,7 +17,7 @@ jobs:
       - name: Use Node.js v20 with GitHub Package Registry
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
           cache: yarn
           registry-url: https://registry.yarnpkg.com/
       - name: Replace name in package.json
