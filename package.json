@@ -30,7 +30,7 @@
     "prepack": "yarn build"
   },
   "dependencies": {
-    "@sapphire/result": "^2.7.3"
+    "@sapphire/result": "^2.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
@@ -55,7 +55,7 @@
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "vite": "^7.1.12",
+    "vite": "^7.2.2",
     "vitest": "^3.2.4"
   },
   "repository": {
@@ -102,5 +102,5 @@
   "eslintConfig": {
     "extends": "@sapphire"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.11.0"
 }
